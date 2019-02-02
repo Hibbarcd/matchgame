@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Vampiro+One" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <title>Valentines Match Game</title>
+</head>
+<body>
+    <h1 class="page-title">Romantic Mix-n-Match!</h1>
+    <div class="overlay-text visible">
+        Click To Start
+    </div>
+    <div class="overlay-text" id="game-over-text">
+        Game Over
+        <span class="overlay-text-small">Click To Restart</span>
+    </div>
+    <div class="overlay-text" id="victory-text">
+        Victory!!!
+        <span class="overlay-text-small">Click To Restart</span>
+    </div>
+        <div class="game-container">
+            <div class="game-info-container">
+                <div class="game-info">
+                    Time: 
+                    <span id="time-remaining">100</span>
+                </div>
+                <div class="game-info">
+                    Flips: 
+                    <span id="flips">0</span>
+                </div>
+            </div>
+                <div class="card">
+                    <div class="card-back card-face">
+                        <img class="heart"
+                        src="./assets/Images/pinkheart.png">
+                        <img class="heart2"
+                        src="./assets/Images/pinkheart.png">
+                        <img class="heart3"
+                        src="./assets/Images/pinkheart.png">
+                    </div>
+                    <div class="card-front card-face">
+                        <img class="front-image"
+                        src="./assets/Images/gold-arrow.png">
+                        <img class="top-corner-heart"
+                        src="./assets/Images/heart.jpg">
+                        <img class="top-corner-heart2"
+                        src="./assets/Images/heart.jpg">
+                        <img class="bottom-corner-heart"
+                        src="./assets/Images/heart.jpg">
+                        <img class="bottom-corner-heart2"
+                        src="./assets/Images/heart.jpg">
+                    </div>  
+                </div>
+            <div class="card">
+                    <div class="card-back card-face">
+                        <img class="heart"
+                        src="./assets/Images/pinkheart.png">
+                        <img class="heart2"
+                        src="./assets/Images/pinkheart.png">
+                        <img class="heart3"
+                        src="./assets/Images/pinkheart.png">
+                    </div>
+                    <div class="card-front card-face">
+                        <img class="front-image"
+                        src="./assets/Images/gold-arrow.png">
+                        <img class="top-corner-heart"
+                        src="./assets/Images/heart.jpg">
+                        <img class="top-corner-heart2"
+                        src="./assets/Images/heart.jpg">
+                        <img class="bottom-corner-heart"
+                        src="./assets/Images/heart.jpg">
+                        <img class="bottom-corner-heart2"
+                        src="./assets/Images/heart.jpg">
+                    </div>
+                </div>    
+            <div class="card">
+                <div class="card-back card-face">
+                    <img class="heart"
+                    src="./assets/Images/pinkheart.png">
+                    <img class="heart2"
+                    src="./assets/Images/pinkheart.png">
+                    <img class="heart3"
+                    src="./assets/Images/pinkheart.png">
+                </div>
+                <div class="card-front card-face">
+                    <img class="front-image"
+                    src="./assets/Images/cherub.png">
+                    <img class="top-corner-heart"
+                    src="./assets/Images/heart.jpg">
+                    <img class="top-corner-heart2"
+                    src="./assets/Images/heart.jpg">
+                    <img class="bottom-corner-heart"
+                    src="./assets/Images/heart.jpg">
+                    <img class="bottom-corner-heart2"
+                    src="./assets/Images/heart.jpg">
+                </div>
+            </div> 
+            <div class="card">                    
+                <div class="card-back card-face">
+                    <img class="heart"
+                    src="./assets/Images/pinkheart.png">
+                    <img class="heart2"
+                    src="./assets/Images/pinkheart.png">
+                    <img class="heart3"
+                    src="./assets/Images/pinkheart.png">
+                </div>
+                <div class="card-front card-face">
+                    <img class="front-image"
+                    src="./assets/Images/cherub.png">
+                    <img class="top-corner-heart"
+                    src="./assets/Images/heart.jpg">
+                    <img class="top-corner-heart2"
+                    src="./assets/Images/heart.jpg">
+                    <img class="bottom-corner-heart"
+                    src="./assets/Images/heart.jpg">
+                    <img class="bottom-corner-heart2"
+                    src="./assets/Images/heart.jpg">
+                </div>
+            </div> 
+            <div class="card">                    
+                <div class="card-back card-face">
+                    <img class="heart"
+                    src="./assets/Images/pinkheart.png">
+                    <img class="heart2"
+                    src="./assets/Images/pinkheart.png">
+                    <img class="heart3"
+                    src="./assets/Images/pinkheart.png">
+                </div>
+                <div class="card-front card-face">
+                    <img class="front-image"
+                    src="./assets/Images/cupid-arrow.png">
+                    <img class="top-corner-heart"
+                    src="./assets/Images/heart.jpg">
+                    <img class="top-corner-heart2"
+                    src="./assets/Images/heart.jpg">
+                    <img class="bottom-corner-heart"
+                    src="./assets/Images/heart.jpg">
+                    <img class="bottom-corner-heart2"
+                    src="./assets/Images/heart.jpg">
+                </div>
+            </div>    
+            <div class="card">                    
+                <div class="card-back card-face">
+                    <img class="heart"
+                    src="./assets/Images/pinkheart.png">
+                    <img class="heart2"
+                    src="./assets/Images/pinkheart.png">
+                    <img class="heart3"
+                    src="./assets/Images/pinkheart.png">
+                </div>
+                <div class="card-front card-face">
+                    <img class="front-image"
+                    src="./assets/Images/cupid-arrow.png">
+                    <img class="top-corner-heart"
+                    src="./assets/Images/heart.jpg">
+                    <img class="top-corner-heart2"
+                    src="./assets/Images/heart.jpg">
+                    <img class="bottom-corner-heart"
+                    src="./assets/Images/heart.jpg">
+                    <img class="bottom-corner-heart2"
+                    src="./assets/Images/heart.jpg">
+                </div>
+            </div>    
+            <div class="card">
+                <div class="card-back card-face">
+                    <img class="heart"
+                    src="./assets/Images/pinkheart.png">
+                    <img class="heart2"
+                    src="./assets/Images/pinkheart.png">
+                    <img class="heart3"
+                    src="./assets/Images/pinkheart.png">
+                </div>
+                <div class="card-front card-face">
+                    <img class="front-image"
+                    src="./assets/Images/heart-boquet.jpg">
+                    <img class="top-corner-heart"
+                    src="./assets/Images/heart.jpg">
+                    <img class="top-corner-heart2"
+                    src="./assets/Images/heart.jpg">
+                    <img class="bottom-corner-heart"
+                    src="./assets/Images/heart.jpg">
+                    <img class="bottom-corner-heart2"
+                    src="./assets/Images/heart.jpg">
+                </div>
+            </div>    
+            <div class="card">
+                    <div class="card-back card-face">
+                    <img class="heart"
+                    src="./assets/Images/pinkheart.png">
+                    <img class="heart2"
+                    src="./assets/Images/pinkheart.png">
+                    <img class="heart3"
+                    src="./assets/Images/pinkheart.png">
+                </div>
+                <div class="card-front card-face">
+                    <img class="front-image"
+                    src="./assets/Images/heart-boquet.jpg">
+                    <img class="top-corner-heart"
+                    src="./assets/Images/heart.jpg">
+                    <img class="top-corner-heart2"
+                    src="./assets/Images/heart.jpg">
+                    <img class="bottom-corner-heart"
+                    src="./assets/Images/heart.jpg">
+                    <img class="bottom-corner-heart2"
+                    src="./assets/Images/heart.jpg">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-back card-face">
+                    <img class="heart"
+                    src="./assets/Images/pinkheart.png">
+                    <img class="heart2"
+                    src="./assets/Images/pinkheart.png">
+                    <img class="heart3"
+                    src="./assets/Images/pinkheart.png">
+                </div>
+                <div class="card-front card-face">
+                    <img class="front-image"
+                    src="./assets/Images/arrow-heart.jpg">
+                    <img class="top-corner-heart"
+                    src="./assets/Images/heart.jpg">
+                    <img class="top-corner-heart2"
+                    src="./assets/Images/heart.jpg">
+                    <img class="bottom-corner-heart"
+                    src="./assets/Images/heart.jpg">
+                    <img class="bottom-corner-heart2"
+                    src="./assets/Images/heart.jpg">
+                </div>
+            </div>    
+            <div class="card">
+                <div class="card-back card-face">
+                    <img class="heart"
+                    src="./assets/Images/pinkheart.png">
+                    <img class="heart2"
+                    src="./assets/Images/pinkheart.png">
+                    <img class="heart3"
+                    src="./assets/Images/pinkheart.png">
+                </div>
+                <div class="card-front card-face">
+                    <img class="front-image"
+                    src="./assets/Images/arrow-heart.jpg">
+                    <img class="top-corner-heart"
+                    src="./assets/Images/heart.jpg">
+                    <img class="top-corner-heart2"
+                    src="./assets/Images/heart.jpg">
+                    <img class="bottom-corner-heart"
+                    src="./assets/Images/heart.jpg">
+                    <img class="bottom-corner-heart2"
+                    src="./assets/Images/heart.jpg">
+                </div>
+            </div>    
+            <div class="card">
+                <div class="card-back card-face">
+                    <img class="heart"
+                    src="./assets/Images/pinkheart.png">
+                    <img class="heart2"
+                    src="./assets/Images/pinkheart.png">
+                    <img class="heart3"
+                    src="./assets/Images/pinkheart.png">
+                </div>
+                <div class="card-front card-face">
+                    <img class="front-image"
+                    src="./assets/Images/red-roses.jpg">
+                    <img class="top-corner-heart"
+                    src="./assets/Images/heart.jpg">
+                    <img class="top-corner-heart2"
+                    src="./assets/Images/heart.jpg">
+                    <img class="bottom-corner-heart"
+                    src="./assets/Images/heart.jpg">
+                    <img class="bottom-corner-heart2"
+                    src="./assets/Images/heart.jpg">
+                </div>
+            </div>    
+            <div class="card">
+                <div class="card-back card-face">
+                    <img class="heart"
+                     src="./assets/Images/pinkheart.png">
+                    <img class="heart2"
+                    src="./assets/Images/pinkheart.png">
+                    <img class="heart3"
+                    src="./assets/Images/pinkheart.png">
+                </div>
+                <div class="card-front card-face">
+                    <img class="front-image"
+                    src="./assets/Images/red-roses.jpg">
+                    <img class="top-corner-heart"
+                    src="./assets/Images/heart.jpg">
+                    <img class="top-corner-heart2"
+                    src="./assets/Images/heart.jpg">
+                    <img class="bottom-corner-heart"
+                    src="./assets/Images/heart.jpg">
+                    <img class="bottom-corner-heart2"
+                    src="./assets/Images/heart.jpg">
+                </div>
+            </div>   
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,223 @@
+@font-face {
+    font-family: 'Vampiro One', cursive;
+    src: url(assets/Fonts/Vampiro);
+}
+* {
+    box-sizing: border-box;
+}
+html {
+    min-height: 100vh;
+    cursor: url("assets/Cursors/hearts.cur");
+}
+body {
+    margin: 0;
+    background: rgb(253,255,0);
+    background: radial-gradient(circle, rgba(253,255,0,1) 0%, rgba(194,13,13,1) 0%, rgba(186,25,147,0.9806062073266807) 52%, rgba(255,0,0,0.9806062073266807) 100%);
+}
+.page-title {
+    font-family: 'Vampiro One', cursive;
+    color: rgb(255, 0, 0);
+    font-size: 5em;
+    font-weight: normal;
+    text-align: center;
+    text-shadow: 2px 2px black;
+}
+.game-info {
+    color: rgb(255, 0, 149);
+    font-family: 'Vampiro One', cursive;
+    font-size: 3em;
+    text-shadow: 2px 2px black;
+}
+.game-info-container {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+}
+.game-container {
+    display: grid;
+    grid-template-columns: repeat( 4, auto);
+    grid-gap: 10px;
+    margin: 30px;
+    justify-content: center;
+    perspective: 500px;
+}
+.card {
+    background-color: whitesmoke;
+    position: relative;
+    margin-top: 30px;
+    border: 2px solid red;
+    height: 165px;
+    width: 115px;
+    border-radius: 12px;
+}
+.overlay-text {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    color: blue;
+    font-family: 'Vampiro One', cursive;
+    font-size: 7em;
+}
+#victory-text, #game-over-text {
+    text-shadow: 2px 2px red;
+}
+.overlay-text-small {
+    font-size: .3em;
+}
+.overlay-text.visible {
+    display: flex;
+    animation: overlay-grow 500ms forwards;
+    flex-direction: column;
+}
+@keyframes overlay-grow {
+    from {
+        background-color: rgb(0, 0, 0, 0);
+        font-size: 0;
+    }
+    to {
+        background-color: rgb(0, 0, 0, .8);
+        font-size: 5em;
+    }
+}
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    transition: transform 500ms ease-in-out;
+}
+.card.matched .card-back {
+transform: rotateY(-180deg);
+}
+.card:hover .card-front {
+    transform: rotateY(0);
+}
+.card:hover .card-value {
+    animation: dance 1s linear infinite 500ms;
+}
+@keyframes dance {
+    0%, 100% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(-30deg);
+    }
+    75% {
+        transform: rotate(30deg);
+
+    }
+}
+.card-front {
+    transform: rotateY(180deg);
+    border: 2px solid purple;
+    background-color: rgb(255, 255, 255);
+}
+.front-image {
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    align-self: flex-start;
+    transition: transform 200ms ease-in-out;
+    bottom: 50px;   
+}
+.bottom-corner-heart {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    bottom: 0;
+    left: 0;
+    align-self: flex-start;
+}
+.bottom-corner-heart2 {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    bottom: 0;
+    right: 0;
+    align-self: flex-start;
+}
+.top-corner-heart {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    top: 0;
+    left: 0;
+    align-self: flex-start;
+}
+.top-corner-heart2 {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    top: 0;
+    right: 0;
+    align-self: flex-start;
+}
+.heart {
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    align-self: flex-start;
+    transition: transform 100ms ease-in-out;
+}
+.heart2 {
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    align-self: flex-start;
+    bottom: 50px;
+    transition: transform 100ms ease-in-out;
+}
+.heart3 {
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    align-self: flex-start;
+    bottom: 0;
+    transition: transform 100ms ease-in-out;
+}
+.card-back {
+    transform: rotateY(0);
+    border: 2px solid rgba(255,0,0,0.9806062073266807);
+}
+.card-back:hover .heart {
+    animation: pulse 1s infinite;
+    transition: .3s;
+}
+.card-back:hover .heart2 {
+    animation: pulse 1s infinite;
+    transition: .3s;
+}
+.card-back:hover .heart3 {
+    animation: pulse 1s infinite;
+    transition: .3s;
+}
+@keyframes pulse {
+	0% {
+	  transform: scale(1);
+	}
+	70% {
+	  transform: scale(.8);
+	}
+	  100% {
+		  /* border: 3px solid rgb(220, 20, 20); */
+	  transform: scale(1);
+	}
+    }
+    @media (max-width: 600px) {
+        .game-container {
+            grid-template-columns: repeat(2,auto);
+        }
+        .game-info-container {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
