@@ -64,6 +64,9 @@ body {
     font-family: 'Vampiro One', cursive;
     font-size: 7em;
 }
+.card.matched .card-value {
+    animation: dance 1s linear infinite 500ms;
+  }
 #victory-text, #game-over-text {
     text-shadow: 2px 2px red;
 }
@@ -95,11 +98,14 @@ body {
     backface-visibility: hidden;
     transition: transform 500ms ease-in-out;
 }
-.card.matched .card-back {
+.card.visible .card-back {
 transform: rotateY(-180deg);
 }
-.card:hover .card-front {
+.card.visible .card-front {
     transform: rotateY(0);
+}
+.card.matched .card-front .card-value {
+    animation: dance 1s linear infinite 500ms;
 }
 .card:hover .card-value {
     animation: dance 1s linear infinite 500ms;
@@ -121,6 +127,14 @@ transform: rotateY(-180deg);
     border: 2px solid purple;
     background-color: rgb(255, 255, 255);
 }
+.card-value {
+    position: relative;
+    transition: transform 100ms ease-in-out;
+    transform: scale(.9);
+  }
+  .card-front:hover .card-value {
+    transform: scale(1);
+  }
 .front-image {
     position: absolute;
     height: 70px;
@@ -208,7 +222,6 @@ transform: rotateY(-180deg);
 	  transform: scale(.8);
 	}
 	  100% {
-		  /* border: 3px solid rgb(220, 20, 20); */
 	  transform: scale(1);
 	}
     }
